@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 12
+addons:
+  chrome: stable
+cache:
+  directories:
+  - "node_modules"
+install:
+  - npm install
+script:
+  - npm run test
+deploy:
+  provider: heroku
+  api_key:
+    secure: tlAJNXesYPi54fcqqJbCsT4WkVAfsRbnwTT6evcIPA/NhGlFAj7LSMVcSXUylTSNhXKXn+WEa4A8JEzjh4Rur/K2sdnYHqM2MGAUWYJ+0qYvFdoAG5IX6/a0HxImLVGgmfyAnAetbA2Slg+igMHzkgi6lZciam6su9sHcgC74ZQqHwqjXjB5mCRjJW6ZGHHwmDtYTvH+4erKxGo3I2RjNxKdEp+iLo31xzPVi+QNbDQzojtfWcjrFcfrMaEP3Ke21C6DHbU4CPtw70t+ZuboH4ihtjNpJVaiIMoqO+NgEvXa4l1i2jJtw37AZUI+qcDMZKPH2gF8NbwzJuH37S1Z+DRXMcHlHFFQRM3fFEi2PHuDq3RZfIehU+TQN4B1QrlF7FPzFS1y6LFW67DrXtwgsvEYRQ0rixQT74XBXnyxtfkDpGoTceFIr1pdj6POeIgA+35g1FRQP3xbVwApUIRI5hIctO6lQvzFMswR9SD5BEgE70P5PJLggPX0RL4VDiwWYoPv7FqICTJOvc1NstL9yZGaGsHq9bUn0VlW4jXOn+onz+uDW+cXKw4hGU9aaMLuvJdjOeVqMuwvRqyDH+nKW1d/EM4oe3eGXpsZhkl0GwjpFqwk1DJEeAWZBQjdMuQUxfTioDzAtaYOydLAnPoN62ycnBcLT2q7c59RvWntInM=
+  app: travis-heroku-app
